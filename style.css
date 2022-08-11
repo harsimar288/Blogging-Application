@@ -1,0 +1,27 @@
+.input-group{
+    margin-top:50px;
+    margin-bottom:50px;
+}
+#content{
+   
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+}
+.nav-item{
+    margin:14px;
+}
+#po{
+    height:800px;
+}
+#signme{
+    display:none;
+}
+#su:hover#signme{
+    display:block;
+}
+#what{
+    height:450px;
+    border-radius:12px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
