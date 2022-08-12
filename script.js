@@ -6,7 +6,7 @@ document.querySelector("#button").addEventListener("click",() =>
     
     
     //let url=`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCgAdwuoVqjcIiVoZrqGpaKf7SYK3FXt7g&part=snippet&q=${value}&maxResults=100`;
-    let url=`https://jsonplaceholder.typicode.com/posts?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term=2022-08-11`;
+    let url=`https://jsonplaceholder.typicode.com/posts?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term=2022-08-09&part=snippet&q=${value}&maxResults=100`;
     xhr.open('GET',url)
 console.log(`ReadyState - ${xhr.readyState}`)
 
@@ -21,15 +21,22 @@ xhr.onreadystatechange=()=>{
 	for(i=0;i<50;i++)
 	{
 	output+=`
-    
-    <div class="card" style="width: 18rem;">
-  <div class="card-body ">
+ 
+  <div class="card m-5" style="width: 18rem">
+  <img
+    src="load.jpg"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
     <h5 class="card-title">${objectResponse[i].title}</h5>
-    <p class="card-text">${objectResponse[i].body}</p>
-   
+    <p class="card-text">
+    ${objectResponse[i].body}
+    </p>
   </div>
 </div>
-<br><br><br>
+   </div>
+   
     `
     }
 	document.querySelector("#content").innerHTML=output;
@@ -38,7 +45,7 @@ xhr.onreadystatechange=()=>{
     }
 }
 	
-//send the request
+//send the requestp
 xhr.send();
 
 })
@@ -46,3 +53,4 @@ document.querySelector("#su").addEventListener('click',theCloak);
 function theCloak() {
 	document.getElementById("signme").style.display="block";
 } 
+
